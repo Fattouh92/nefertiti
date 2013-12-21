@@ -124,3 +124,4 @@ DEPENDENCIES
   sqlite3
   tabulous
   uglifier (>= 1.0.3)
+  unicorn

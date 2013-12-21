@@ -23,6 +23,7 @@ end
 gem 'sqlite3', :group => [:development, :test]
 
 group :production do
+	gem 'unicorn'
 	gem 'pg'
 	gem 'rails_12factor'
 end
