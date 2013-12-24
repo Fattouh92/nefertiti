@@ -7,7 +7,7 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="my-font">
 	<div class="navbar navbar-inverse">
   <div class="navbar-inner" style="background-image:url('/assets/sea.jpg');">
     <div class="container-fluid">
@@ -18,17 +18,25 @@
 </div>
     <br>
     <div class="container">
+      <%if !(request.original_url.include? "contact" or request.original_url.include? "boats")%>
       <div id="carousel-example-generic" class="carousel slide">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
     <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
   </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" style="width:950px; height:350px;">
     <div class="item active" style="width:950px; height:350px;">
+      <img src="/assets/rig.jpg" alt="...">
+      <div class="carousel-caption">
+        Osa
+      </div>
+    </div>
+    <div class="item" style="width:950px; height:350px;">
       <img src="/assets/Osa.jpg" alt="...">
       <div class="carousel-caption">
         Osa
@@ -57,7 +65,7 @@
   </a>
 </div>
 <br>
-
+<%end%>
 <%= yield %>
 <div style="margin-top:30px"><hr style="width:905px; background-color:#000; border-color:#000;"><p style="text-align:center;"><a href="mailto:mohamedtamer92@gmail.com">Designed by: Aboul Azm, Mohamed</a></p></div>
 </div>
