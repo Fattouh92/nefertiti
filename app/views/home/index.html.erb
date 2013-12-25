@@ -1,3 +1,5 @@
+<div class="pull-right" style="margin-top:-20px"><a onClick="Stop()" id="button"><img id="audio-img" style="height:40px;" src="/assets/mute.png"></a></div>
+<br>
 <div class="container-fluid">
   <div class="row-fluid">
     <div class="span3">
@@ -12,9 +14,21 @@ We continued developing to have three main activities nowadays which are Off-sho
     </div>
   </div>
 </div>
-<br>
-<audio id="music" class="pull-right" controls autoplay loop>
+<audio id="music" class="pull-right" autoplay loop>
   <source src="/assets/music.ogg" type="audio/ogg">
   Your browser does not support the audio tag.
 </audio>
+<script type="text/javascript">
+var counter = 0;
+function Stop() {
+	if (counter % 2 == 0) {
+		document.getElementById("music").pause();
+		document.getElementById("audio-img").src = "/assets/unmute.png";
+	} else {
+		document.getElementById("music").play();
+		document.getElementById("audio-img").src = "/assets/mute.png";
+	}
+	counter = counter + 1;
+}
+</script>
 
