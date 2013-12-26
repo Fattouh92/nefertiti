@@ -13,6 +13,37 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
 
  */
+
+ .hand {
+  position:relative;
+  animation-name:myfirst;
+  animation-duration:8s;
+  animation-timing-function:linear;
+  animation-iteration-count:infinite;
+  animation-direction:alternate;
+  animation-play-state:running;
+  -webkit-animation-name:myfirst;
+  -webkit-animation-duration:8s;
+  -webkit-animation-timing-function:linear;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-direction:alternate;
+  -webkit-animation-play-state:running;
+}
+@keyframes myfirst {
+  0%   {left:0px; top:0px;}
+  25%  {left:500px; top:0px;}
+  50%  {left:0px; top:0px;}
+  75%  {left:500px; top:0px;}
+  100% {left:0px; top:0px;}
+}
+@-webkit-keyframes myfirst {
+  0%   {left:0px; top:0px;}
+  25%  {left:500px; top:0px;}
+  50%  {left:0px; top:0px;}
+  75%  {left:500px; top:0px;}
+  100% {left:0px; top:0px;}
+}
+
 @font-face {
   font-family: "my titles";
   src: url('/assets/type/Quicksand-Regular.otf')
@@ -98,7 +129,7 @@ right connector from last child*/
 	text-decoration: none;
 	color: #666;
 	font-family: arial, verdana, tahoma;
-	font-size: 11px;
+	font-size: 14px;
 	display: inline-block;
 	
 	border-radius: 5px;
