@@ -14,35 +14,84 @@
 
  */
 
- .hand {
-  position:relative;
-  animation-name:myfirst;
-  animation-duration:8s;
-  animation-timing-function:linear;
-  animation-iteration-count:infinite;
-  animation-direction:alternate;
-  animation-play-state:running;
-  -webkit-animation-name:myfirst;
-  -webkit-animation-duration:8s;
-  -webkit-animation-timing-function:linear;
-  -webkit-animation-iteration-count:infinite;
-  -webkit-animation-direction:alternate;
-  -webkit-animation-play-state:running;
+ .root {
+  position: relative;
 }
-@keyframes myfirst {
-  0%   {left:0px; top:0px;}
-  25%  {left:500px; top:0px;}
-  50%  {left:0px; top:0px;}
-  75%  {left:500px; top:0px;}
-  100% {left:0px; top:0px;}
+
+.level {
+  margin-left: 240px;
+  position: relative;
 }
-@-webkit-keyframes myfirst {
-  0%   {left:0px; top:0px;}
-  25%  {left:500px; top:0px;}
-  50%  {left:0px; top:0px;}
-  75%  {left:500px; top:0px;}
-  100% {left:0px; top:0px;}
+.level:before {
+  content: "";
+  width: 50px;
+  border-top: 2px solid #eee9dc;
+  position: absolute;
+  left: -98px;
+  top: 50%;
+  margin-top: 1px;
 }
+
+.item {
+  min-height: 50px;
+  position: relative;
+}
+.item:before {
+  content: "";
+  height: 100%;
+  border-left: 2px solid #eee9dc;
+  position: absolute;
+  left: -48px;
+}
+.item:after {
+  content: "";
+  width: 46px;
+  border-top: 2px solid #eee9dc;
+  position: absolute;
+  left: -46px;
+  top: 50%;
+  margin-top: 1px;
+}
+
+.item:first-child:before {
+  width: 10px;
+  height: 50%;
+  top: 50%;
+  margin-top: 2px;
+  border-top-left-radius: 10px;
+}
+.item:first-child:after {
+  height: 10px;
+  border-top-left-radius: 10px;
+}
+
+.item:last-child:before {
+  width: 10px;
+  height: 50%;
+  border-bottom-left-radius: 10px;
+}
+.item:last-child:after {
+  height: 10px;
+  border-top: none;
+  border-bottom: 2px solid #eee9dc;
+  border-bottom-left-radius: 10px;
+  margin-top: -11px;
+}
+
+.title {
+  width: 120px;
+  padding: 5px 10px;
+  line-height: 20px;
+  text-align: center;
+  border: 2px solid #eee9dc;
+  border-radius: 5px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -15px;
+}
+
 
 @font-face {
   font-family: "my titles";
